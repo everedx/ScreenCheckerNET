@@ -1,0 +1,51 @@
+﻿<Window x:Class="ScreenCheckerNET.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScreenCheckerNET"
+        mc:Ignorable="d"
+        Title="Screen Checker" Height="285" Width="400"
+        WindowStyle="None"
+        ResizeMode="NoResize" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp" Background="#FF2E2E2E"
+        MouseDown="Window_MouseDown_1">
+    
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="283*"/>
+            <ColumnDefinition Width="117*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Height="40" LastChildFill="False" VerticalAlignment="Top" Width="auto" Background="Black" Margin="0,0,0,0" Grid.ColumnSpan="2">
+            <Button Content="X" Height="40" VerticalAlignment="Top" Width="45" HorizontalAlignment="Right" DockPanel.Dock="Right" Foreground="Black" FontWeight="Bold" Click="Button_Click_Close" Background="#FFFF0B0B" BorderBrush="Red"/>
+            <Button Content="_" Height="40" VerticalAlignment="Top" Width="45" HorizontalAlignment="Right" DockPanel.Dock="Right" FontWeight="Bold" Click="Button_Click_Minimize"/>
+            <Image Height="40" VerticalAlignment="Top" Width="82" Source="Res/siceLogo.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+            <Label  Content="Screen Checker" Height="40" VerticalAlignment="Center" Margin="15,0,0,0" HorizontalAlignment="Center" Width="200" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FFB2B2B2"/>
+        </DockPanel>
+        <Image Name="ScreenShot" HorizontalAlignment="Left" Height="113" Margin="3,44,0,0" VerticalAlignment="Top" Width="107" Grid.Column="1"/>
+
+        <ScrollViewer Height="100" Margin="12,152,12,0" Grid.ColumnSpan="2"  >
+            <TextBlock Name="Log" Text="" TextWrapping="Wrap" Height="100" Width="358" Foreground="#FF17FF00" Background="Black" Cursor="" ScrollViewer.CanContentScroll="True"/>
+        </ScrollViewer>
+
+        <Label Content="Top Left corner: " HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Foreground="#FFC3C3C3"/>
+        <Label Content="Bottom Right corner:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Foreground="#FFC3C3C3"/>
+        <Label x:Name="Point1" Content="Press space to set" HorizontalAlignment="Left" Margin="129,40,0,0" VerticalAlignment="Top" Width="152" Foreground="#FFC3C3C3"/>
+        <Label x:Name="Point2" Content="Press space to set" HorizontalAlignment="Left" Margin="129,66,0,0" VerticalAlignment="Top" Width="152" Foreground="#FFC3C3C3"/>
+        <Button x:Name="EndButton"  Content="Stop" HorizontalAlignment="Left" Margin="93,111,0,0" VerticalAlignment="Top" Width="83" Height="30" Click="Button_Click_1" Foreground="#FFF50000" BorderBrush="#FF00FFB9" IsEnabled="False" BorderThickness="2,2,2,0" FontWeight="UltraBold" FontStretch="Expanded">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="StartButton"  Content="Start" HorizontalAlignment="Left" Margin="5,111,0,0" VerticalAlignment="Top" Width="83" Height="30" Click="Button_Click" Foreground="#FF0AF000" BorderBrush="#FF00FFB9" IsEnabled="False" BorderThickness="2,2,2,0" FontWeight="UltraBold" FontStretch="Expanded">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Name="SizeLabel" Content="" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" Foreground="#FFC3C3C3"/>
+        <Border BorderBrush="#FF00DFBA" BorderThickness="2" Grid.ColumnSpan="2"/>
+
+
+
+    </Grid>
+</Window>
