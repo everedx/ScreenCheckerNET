@@ -19,7 +19,7 @@
         <DockPanel Height="40" LastChildFill="False" VerticalAlignment="Top" Width="auto" Background="Black" Margin="0,0,0,0" Grid.ColumnSpan="2">
             <Button Content="X" Height="40" VerticalAlignment="Top" Width="45" HorizontalAlignment="Right" DockPanel.Dock="Right" Foreground="Black" FontWeight="Bold" Click="Button_Click_Close" Background="#FFFF0B0B" BorderBrush="Red"/>
             <Button Content="_" Height="40" VerticalAlignment="Top" Width="45" HorizontalAlignment="Right" DockPanel.Dock="Right" FontWeight="Bold" Click="Button_Click_Minimize"/>
-            <Image Height="40" VerticalAlignment="Top" Width="82" Source="Res/siceLogo.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+            <Image Height="40" VerticalAlignment="Top" Width="82" RenderOptions.BitmapScalingMode="HighQuality" Source="/siceLogo.png"/>
             <Label  Content="Screen Checker" Height="40" VerticalAlignment="Center" Margin="15,0,0,0" HorizontalAlignment="Center" Width="200" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FFB2B2B2"/>
         </DockPanel>
         <Image Name="ScreenShot" HorizontalAlignment="Left" Height="113" Margin="3,44,0,0" VerticalAlignment="Top" Width="107" Grid.Column="1"/>
